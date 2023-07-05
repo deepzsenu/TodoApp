@@ -1,0 +1,157 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,900&display=swap'); */
+
+/* Global styles */
+*{
+    background-color: rgba(54, 3, 82, 0.79);;
+}
+body {
+    background-color: rgba(54, 3, 82, 0.79);
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif; /* Using the 'Poppins' font */
+  }
+  
+  /* Main container styles */
+  .main-container {
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 100%;
+    border: 2px solid rgba(54, 3, 82, 0.79);
+    background-color: rgb(211, 190, 231);
+  }
+  
+  /* Heading styles */
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(54, 3, 82, 0.79);
+    border-top: 2px solid rgba(54, 3, 82, 0.79);
+    height: 3.2rem;
+    color: rgba(54, 3, 82, 0.79);
+  }
+  
+  /* Category and Due Date section styles */
+  .cat-date {
+    width: 100%;
+    height: 3.2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px solid rgba(54, 3, 82, 0.79);
+  }
+  
+  /* Description section styles */
+  .desc {
+    border-bottom: 2px solid rgba(54, 3, 82, 0.79);
+  }
+  
+  .discription {
+    height: 3.2rem;
+    margin-left: 10px;
+  }
+  
+  /* Category section styles */
+  .cat {
+    width: 50%;
+    margin-left: 10px;
+    border-right: 2px solid rgba(54, 3, 82, 0.79);
+  }
+  
+  /* Due Date section styles */
+  .due-date {
+    width: 50%;
+    margin-left: 10px;
+    /* border-left: 1px solid rgba(54, 3, 82, 0.79); */
+  }
+  
+  /* Add Task button styles */
+  .add-task {
+    height: 2.5rem;
+    font-size: 15px;
+    width: 8rem;
+    margin: auto;
+    margin-left: 39%;
+    margin-top: 10px;
+    background-color: aquamarine;
+    font-weight: 700;
+    border: 1px solid rgba(54, 3, 82, 0.79);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
+  .add-task:hover {
+    background-color: rgb(4, 177, 56);
+  }
+  
+  /* Delete Task section styles */
+  .del-bar {
+    border-bottom: 2px solid rgba(54, 3, 82, 0.79);
+  }
+  
+  i {
+    margin-right: 6px;
+  }
+  
+  .del-task {
+    height: 2.5rem;
+    width: 8rem;
+    margin-left: 39%;
+    font-size: 15px;
+    /* margin-top: -7rem;
+    margin-bottom: -2rem; */
+    background-color: rgb(243, 140, 109);
+    font-weight: 700;
+    border: 1px solid rgba(54, 3, 82, 0.79);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
+  .del-task:hover {
+    background-color: red;
+  }
+  
+  /* Task display styles */
+  .tasks-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    border-bottom: 2px solid rgba(54, 3, 82, 0.79);
+  }
+  
+  .check-box {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  
+  .des-date {
+    width: 65%;
+  }
+  
+  /* Category label styles */
+  .category {
+    height: 2.5rem;
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(54, 3, 82, 0.79);
+    color: white;
+    background-color: rgba(54, 3, 82, 0.79);
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+  }
