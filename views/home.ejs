@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title from a dynamic value "title" -->
+  <title><%=title%></title>
+  <!-- External CSS stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Font Awesome icon kit -->
+  <script src="https://kit.fontawesome.com/2e2af52499.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Main container for the entire page -->
+  <div class="main-container">
+    <!-- Heading section -->
+    <div class="heading">TODO APP</div>
+    <!-- Form to create a new task, action attribute points to "/create-task" and uses POST method -->
+    <form action="/create-task" method="POST">
+      <!-- Section to add a new task item -->
+      <div class="add-item-section">
+        <!-- Description input field -->
+        <div class="desc">
+          <div class="discription">
+            <div>Description</div>
+            <div>
+              <input
+                type="description"
+                name="description"
+                placeholder="Add the task Here"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Category and Due Date inputs -->
+        <div class="cat-date">
+          <!-- Category selection dropdown -->
+          <div class="cat">
+            <div>Category</div>
+            <div>
+              <select name="category" id="category">
+                <option>PERSONAL</option>
+                <option>WORK</option>
+                <option>SCHOOL</option>
+                <option>CLEANING</option>
+                <option>OTHER</option>
+              </select>
+            </div>
+          </div>
+          <!-- Due Date input -->
+          <div class="due-date">
+            <div>Due Date</div>
+            <div>
+              <input type="date" name="date" required />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button to submit the form and add the task -->
+      <button type="submit" class="add-task"><i class="fa-solid fa-plus"></i>ADD TASK</button>
+    </form>
+
+    <!-- Section to display the tasks and an option to delete tasks -->
+    <div class="display-task" id="del">
+      <!-- Form to delete tasks, action attribute points to "delete-task" and uses POST method -->
+      <form action="delete-task" method="post">
+        <!-- Delete task button -->
+        <div class="del-bar">
+          <button type="submit" class="del-task"><i class="fa-solid fa-trash-can"></i>DELETE TASK</button>
+        </div>
+        <br />
+
+        <!-- Loop through the "task" array to display individual tasks -->
+        <div>
+          <% for( let i of task ){%>
+          <!-- Task item display -->
+          <div class="tasks-display">
+            <!-- Checkbox to mark task completion, name attribute uses the task ID for identification -->
+            <div class="check-box">
+              <input type="checkbox" name="<%= i._id %>" />
+            </div>
+            <!-- Task description and due date -->
+            <div class="des-date">
+              <div class="desciption"><%=i.description%></div>
+              <div class="due-date"><i class="fa-solid fa-calendar-days"></i><%= i.date%></div>
+            </div>
+            <!-- Task category -->
+            <div class="category"><%=i.category%></div>
+          </div>
+          <%}%>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
